@@ -1,0 +1,5 @@
+timm
+pandas
+tensorboard
+tensorboardX
+deepspeed
