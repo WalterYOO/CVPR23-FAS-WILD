@@ -1,0 +1,25 @@
+version: "3"
+services:
+  anti_spoof:
+    image: pytorch/pytorch:1.9.1-cuda11.1-cudnn8-devel
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    #   args:
+    #     - http_proxy=http://192.168.210.143:9998
+    #     - https_proxy=http://192.168.210.143:9998
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    volumes:
+      - ${PWD}:/CVPR23-FAS-WILD
+      - /mnt/data2:/mnt/data2
+      - /mnt/ssd0:/mnt/ssd0
+    shm_size: 384g
+    # command: bash -xc "sleep infinity"
+    command: bash
+    working_dir: /CVPR23-FAS-WILD
+    tty: true
+    stdin_open: true
