@@ -1,0 +1,11 @@
+CUDA_VISIBLE_DEVICES=1 python /CVPR23-FAS-WILD/pytorch-image-models-0.8.10dev0/benchmark.py --model resnet50 --bench inference --num-classes 2
+CUDA_VISIBLE_DEVICES=1 python /CVPR23-FAS-WILD/pytorch-image-models-0.8.10dev0/benchmark.py --model cspresnet50 --bench inference --num-classes 2
+CUDA_VISIBLE_DEVICES=1 python /CVPR23-FAS-WILD/pytorch-image-models-0.8.10dev0/benchmark.py --model cspresnet50 --bench inference --num-classes 2 --input-size 3 256 256
+CUDA_VISIBLE_DEVICES=1 python /CVPR23-FAS-WILD/pytorch-image-models-0.8.10dev0/benchmark.py --model cspresnet50 --bench inference --num-classes 2 --input-size 3 288 288
+CUDA_VISIBLE_DEVICES=1 python /CVPR23-FAS-WILD/pytorch-image-models-0.8.10dev0/benchmark.py --model cspresnet50d --bench inference --num-classes 2
+CUDA_VISIBLE_DEVICES=1 python /CVPR23-FAS-WILD/pytorch-image-models-0.8.10dev0/benchmark.py --model resnet50 --bench inference --num-classes 2 --input-size 3 256 256
+CUDA_VISIBLE_DEVICES=1 python /CVPR23-FAS-WILD/pytorch-image-models-0.8.10dev0/benchmark.py --model resnetv2_50 --bench inference --num-classes 2 --input-size 3 256 256
+CUDA_VISIBLE_DEVICES=1 python /CVPR23-FAS-WILD/pytorch-image-models-0.8.10dev0/benchmark.py --model efficientnetv2_s --bench inference --num-classes 2 --input-size 3 256 256
+CUDA_VISIBLE_DEVICES=1 python /CVPR23-FAS-WILD/pytorch-image-models-0.8.10dev0/benchmark.py --model efficientnetv2_rw_t --bench inference --num-classes 2 --input-size 3 256 256
+CUDA_VISIBLE_DEVICES=1 python /CVPR23-FAS-WILD/pytorch-image-models-0.8.10dev0/benchmark.py --model efficientnet_b4 --bench inference --num-classes 2 --input-size 3 256 256
+CUDA_VISIBLE_DEVICES=1 python /CVPR23-FAS-WILD/pytorch-image-models-0.8.10dev0/benchmark.py --model-list models.txt --bench inference --num-classes 2 --input-size 3 224 224

@@ -1,0 +1,776 @@
+[
+    {
+        "model": "swin_tiny_patch4_window7_224",
+        "infer_samples_per_sec": 875.31,
+        "infer_step_time": 292.438,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 4.35,
+        "param_count": 27.52
+    },
+    {
+        "model": "swinv2_cr_tiny_224",
+        "infer_samples_per_sec": 806.5,
+        "infer_step_time": 317.4,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 4.5,
+        "param_count": 27.56
+    },
+    {
+        "model": "swinv2_tiny_window8_256",
+        "infer_samples_per_sec": 656.03,
+        "infer_step_time": 390.202,
+        "infer_batch_size": 256,
+        "infer_img_size": 256,
+        "infer_gmacs": 5.7,
+        "param_count": 27.58
+    },
+    {
+        "model": "swin_small_patch4_window7_224",
+        "infer_samples_per_sec": 542.79,
+        "infer_step_time": 471.615,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 8.51,
+        "param_count": 48.84
+    },
+    {
+        "model": "swinv2_cr_small_224",
+        "infer_samples_per_sec": 503.78,
+        "infer_step_time": 508.132,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 8.82,
+        "param_count": 48.93
+    },
+    {
+        "model": "swinv2_small_window8_256",
+        "infer_samples_per_sec": 409.34,
+        "infer_step_time": 625.366,
+        "infer_batch_size": 256,
+        "infer_img_size": 256,
+        "infer_gmacs": 11.16,
+        "param_count": 48.96
+    },
+    {
+        "model": "swin_base_patch4_window7_224",
+        "infer_samples_per_sec": 391.06,
+        "infer_step_time": 654.61,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 15.13,
+        "param_count": 86.75
+    },
+    {
+        "model": "swinv2_base_window8_256",
+        "infer_samples_per_sec": 296.16,
+        "infer_step_time": 864.364,
+        "infer_batch_size": 256,
+        "infer_img_size": 256,
+        "infer_gmacs": 19.8,
+        "param_count": 86.9
+    },
+    {
+        "model": "swin_large_patch4_window7_224",
+        "infer_samples_per_sec": 228.62,
+        "infer_step_time": 1119.727,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 34.02,
+        "param_count": 195.0
+    },
+    {
+    "model": "resnet18",
+        "infer_samples_per_sec": 1920.42,
+        "infer_step_time": 133.109,
+        "infer_batch_size": 256,
+        "infer_img_size": 368,
+        "infer_gmacs": 4.99,
+        "param_count": 11.18
+    },
+    {
+        "model": "resnet50",
+        "infer_samples_per_sec": 1006.72,
+        "infer_step_time": 254.052,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 4.09,
+        "param_count": 23.51
+    },
+    {
+        "model": "resnet50",
+        "infer_samples_per_sec": 734.78,
+        "infer_step_time": 348.175,
+        "infer_batch_size": 256,
+        "infer_img_size": 256,
+        "infer_gmacs": 5.34,
+        "param_count": 23.51
+    },
+    {
+        "model": "resnetv2_50",
+        "infer_samples_per_sec": 990.29,
+        "infer_step_time": 258.209,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 4.09,
+        "param_count": 23.5
+    },
+    {
+        "model": "resnetv2_50",
+        "infer_samples_per_sec": 758.7,
+        "infer_step_time": 337.205,
+        "infer_batch_size": 256,
+        "infer_img_size": 256,
+        "infer_gmacs": 5.34,
+        "param_count": 23.5
+    },
+    {
+        "model": "cspresnet50",
+        "infer_samples_per_sec": 1825.38,
+        "infer_step_time": 140.071,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 3.46,
+        "param_count": 20.59
+    },
+    {
+        "model": "cspresnet50",
+        "infer_samples_per_sec": 1447.93,
+        "infer_step_time": 176.623,
+        "infer_batch_size": 256,
+        "infer_img_size": 256,
+        "infer_gmacs": 4.52,
+        "param_count": 20.59
+    },
+    {
+    "model": "cspresnet50d",
+        "infer_samples_per_sec": 1360.23,
+        "infer_step_time": 187.971,
+        "infer_batch_size": 256,
+        "infer_img_size": 256,
+        "infer_gmacs": 4.83,
+        "param_count": 20.61
+    },
+    {
+        "model": "cspresnet50w",
+        "infer_samples_per_sec": 1342.76,
+        "infer_step_time": 190.62,
+        "infer_batch_size": 256,
+        "infer_img_size": 256,
+        "infer_gmacs": 5.02,
+        "param_count": 26.07
+    },
+    {
+        "model": "convnext_nano",
+        "infer_samples_per_sec": 1461.19,
+        "infer_step_time": 175.139,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 2.44,
+        "param_count": 14.95
+    },
+    {
+        "model": "convnext_nano_ols",
+        "infer_samples_per_sec": 1358.81,
+        "infer_step_time": 188.338,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 2.64,
+        "param_count": 15.01
+    },
+    {
+        "model": "convnext_nano",
+        "infer_samples_per_sec": 846.65,
+        "infer_step_time": 302.293,
+        "infer_batch_size": 256,
+        "infer_img_size": 302,
+        "infer_gmacs": 4.13,
+        "param_count": 14.95
+    },
+    {
+        "model": "convnext_nano_ols",
+        "infer_samples_per_sec": 737.43,
+        "infer_step_time": 347.012,
+        "infer_batch_size": 256,
+        "infer_img_size": 302,
+        "infer_gmacs": 4.79,
+        "param_count": 15.01
+    },
+    {
+        "model": "convnext_tiny",
+        "infer_samples_per_sec": 1125.15,
+        "infer_step_time": 227.471,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 4.45,
+        "param_count": 27.82
+    },
+    {
+        "model": "convnext_tiny_hnf",
+        "infer_samples_per_sec": 982.65,
+        "infer_step_time": 260.455,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 4.45,
+        "param_count": 27.82
+    },
+    {
+        "model": "convnext_tiny",
+        "infer_samples_per_sec": 852.68,
+        "infer_step_time": 300.163,
+        "infer_batch_size": 256,
+        "infer_img_size": 256,
+        "infer_gmacs": 5.82,
+        "param_count": 27.82
+    },
+    {
+        "model": "convnext_tiny_hnf",
+        "infer_samples_per_sec": 745.58,
+        "infer_step_time": 343.282,
+        "infer_batch_size": 256,
+        "infer_img_size": 256,
+        "infer_gmacs": 5.82,
+        "param_count": 27.82
+    },
+    {
+        "model": "convnext_small",
+        "infer_samples_per_sec": 689.19,
+        "infer_step_time": 371.378,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 8.68,
+        "param_count": 49.46
+    },
+    {
+        "model": "efficientnetv2_rw_t",
+        "infer_samples_per_sec": 1686.02,
+        "infer_step_time": 151.803,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 1.91,
+        "param_count": 12.63
+    },
+    {
+        "model": "efficientnetv2_s",
+        "infer_samples_per_sec": 1369.56,
+        "infer_step_time": 186.877,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 2.85,
+        "param_count": 20.18
+    },
+    {
+        "model": "efficientnetv2_rw_s",
+        "infer_samples_per_sec": 1313.51,
+        "infer_step_time": 194.851,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 2.94,
+        "param_count": 22.15
+    },
+    {
+        "model": "efficientnetv2_m",
+        "infer_samples_per_sec": 802.68,
+        "infer_step_time": 318.876,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 5.36,
+        "param_count": 52.86
+    },
+    {
+        "model": "efficientnetv2_rw_m",
+        "infer_samples_per_sec": 715.04,
+        "infer_step_time": 357.945,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 6.19,
+        "param_count": 51.09
+    },
+    {
+        "model": "efficientnetv2_l",
+        "infer_samples_per_sec": 450.31,
+        "infer_step_time": 568.401,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 12.23,
+        "param_count": 117.24
+    },
+    {
+        "model": "efficientnetv2_xl",
+        "infer_samples_per_sec": 310.01,
+        "infer_step_time": 825.743,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 17.9,
+        "param_count": 206.84
+    },
+    {
+        "model": "mobilenetv3_small_050",
+        "infer_samples_per_sec": 12201.04,
+        "infer_step_time": 20.922,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.02,
+        "param_count": 0.57
+    },
+    {
+        "model": "mobilenetv3_small_075",
+        "infer_samples_per_sec": 9702.44,
+        "infer_step_time": 26.347,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.04,
+        "param_count": 1.02
+    },
+    {
+        "model": "mobilenetv3_small_100",
+        "infer_samples_per_sec": 8621.45,
+        "infer_step_time": 29.638,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.06,
+        "param_count": 1.52
+    },
+    {
+        "model": "mobilenetv2_035",
+        "infer_samples_per_sec": 5561.94,
+        "infer_step_time": 45.987,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.06,
+        "param_count": 0.4
+    },
+    {
+        "model": "mobilenetv2_050",
+        "infer_samples_per_sec": 4235.96,
+        "infer_step_time": 60.39,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.1,
+        "param_count": 0.69
+    },
+    {
+        "model": "mobilenetv3_large_075",
+        "infer_samples_per_sec": 3125.63,
+        "infer_step_time": 81.823,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.15,
+        "param_count": 2.72
+    },
+    {
+        "model": "mobilenetv3_rw",
+        "infer_samples_per_sec": 2814.94,
+        "infer_step_time": 90.895,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.22,
+        "param_count": 4.2
+    },
+    {
+        "model": "mobilenetv3_large_100",
+        "infer_samples_per_sec": 2739.77,
+        "infer_step_time": 93.388,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.22,
+        "param_count": 4.2
+    },
+    {
+        "model": "mobilenetv2_075",
+        "infer_samples_per_sec": 2602.66,
+        "infer_step_time": 98.32,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.21,
+        "param_count": 1.36
+    },
+    {
+        "model": "mobilenetv2_100",
+        "infer_samples_per_sec": 2212.9,
+        "infer_step_time": 115.624,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.3,
+        "param_count": 2.23
+    },
+    {
+        "model": "mobilenetv2_110d",
+        "infer_samples_per_sec": 1573.06,
+        "infer_step_time": 162.626,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.43,
+        "param_count": 3.24
+    },
+    {
+        "model": "mobilenetv2_140",
+        "infer_samples_per_sec": 1432.14,
+        "infer_step_time": 178.697,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.58,
+        "param_count": 4.32
+    },
+    {
+        "model": "mobilenetv2_120d",
+        "infer_samples_per_sec": 1151.65,
+        "infer_step_time": 222.194,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.67,
+        "param_count": 4.55
+    },
+        {
+        "model": "mobilenetv3_small_050",
+        "infer_samples_per_sec": 3396.29,
+        "infer_step_time": 75.34,
+        "infer_batch_size": 256,
+        "infer_img_size": 448,
+        "infer_gmacs": 0.09,
+        "param_count": 0.57
+    },
+    {
+        "model": "mobilenetv3_small_075",
+        "infer_samples_per_sec": 2501.69,
+        "infer_step_time": 102.272,
+        "infer_batch_size": 256,
+        "infer_img_size": 448,
+        "infer_gmacs": 0.17,
+        "param_count": 1.02
+    },
+    {
+        "model": "mobilenetv3_small_100",
+        "infer_samples_per_sec": 2184.59,
+        "infer_step_time": 117.116,
+        "infer_batch_size": 256,
+        "infer_img_size": 448,
+        "infer_gmacs": 0.22,
+        "param_count": 1.52
+    },
+    {
+        "model": "mobilenetv3_large_075",
+        "infer_samples_per_sec": 862.33,
+        "infer_step_time": 296.786,
+        "infer_batch_size": 256,
+        "infer_img_size": 448,
+        "infer_gmacs": 0.61,
+        "param_count": 2.72
+    },
+    {
+        "model": "mobilenetv3_rw",
+        "infer_samples_per_sec": 740.91,
+        "infer_step_time": 259.08,
+        "infer_batch_size": 192,
+        "infer_img_size": 448,
+        "infer_gmacs": 0.85,
+        "param_count": 4.2
+    },
+    {
+        "model": "mobilenetv3_large_100",
+        "infer_samples_per_sec": 728.1,
+        "infer_step_time": 263.636,
+        "infer_batch_size": 192,
+        "infer_img_size": 448,
+        "infer_gmacs": 0.85,
+        "param_count": 4.2
+    },
+    {
+        "model": "efficientnet_b1_pruned",
+        "infer_samples_per_sec": 3502.96,
+        "infer_step_time": 73.054,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.31,
+        "param_count": 5.05
+    },
+    {
+        "model": "efficientnet_b0",
+        "infer_samples_per_sec": 3142.01,
+        "infer_step_time": 81.448,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.38,
+        "param_count": 4.01
+    },
+    {
+        "model": "efficientnet_b2_pruned",
+        "infer_samples_per_sec": 2794.54,
+        "infer_step_time": 91.591,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.46,
+        "param_count": 6.9
+    },
+    {
+        "model": "efficientnet_b3_pruned",
+        "infer_samples_per_sec": 2732.45,
+        "infer_step_time": 93.65,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.52,
+        "param_count": 8.32
+    },
+    {
+        "model": "efficientnet_b0_gn",
+        "infer_samples_per_sec": 2700.64,
+        "infer_step_time": 94.773,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.38,
+        "param_count": 4.01
+    },
+    {
+        "model": "efficientnet_b1",
+        "infer_samples_per_sec": 2170.99,
+        "infer_step_time": 117.902,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.57,
+        "param_count": 6.52
+    },
+    {
+        "model": "efficientnet_b0_g16_evos",
+        "infer_samples_per_sec": 2109.18,
+        "infer_step_time": 121.355,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 1.0,
+        "param_count": 6.83
+    },
+    {
+        "model": "efficientnet_b2",
+        "infer_samples_per_sec": 2044.15,
+        "infer_step_time": 125.211,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.66,
+        "param_count": 7.7
+    },
+    {
+        "model": "efficientnet_b2a",
+        "infer_samples_per_sec": 2041.01,
+        "infer_step_time": 125.409,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.66,
+        "param_count": 7.7
+    },
+    {
+        "model": "efficientnet_b0_g8_gn",
+        "infer_samples_per_sec": 2016.44,
+        "infer_step_time": 126.937,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.63,
+        "param_count": 5.28
+    },
+    {
+        "model": "efficientnet_b3",
+        "infer_samples_per_sec": 1528.38,
+        "infer_step_time": 167.482,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.96,
+        "param_count": 10.7
+    },
+    {
+        "model": "efficientnet_b3a",
+        "infer_samples_per_sec": 1522.32,
+        "infer_step_time": 168.106,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.96,
+        "param_count": 10.7
+    },
+    {
+        "model": "efficientnet_b3_gn",
+        "infer_samples_per_sec": 1268.66,
+        "infer_step_time": 201.771,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.98,
+        "param_count": 10.2
+    },
+    {
+        "model": "efficientnet_b4",
+        "infer_samples_per_sec": 1123.11,
+        "infer_step_time": 227.884,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 1.5,
+        "param_count": 17.55
+    },
+    {
+        "model": "efficientnet_b3_g8_gn",
+        "infer_samples_per_sec": 940.47,
+        "infer_step_time": 272.18,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 1.5,
+        "param_count": 12.72
+    },
+    {
+        "model": "efficientnet_b5",
+        "infer_samples_per_sec": 787.76,
+        "infer_step_time": 324.918,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 2.35,
+        "param_count": 28.34
+    },
+    {
+        "model": "efficientnet_b6",
+        "infer_samples_per_sec": 591.09,
+        "infer_step_time": 433.06,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 3.36,
+        "param_count": 40.74
+    },
+    {
+        "model": "efficientnet_b7",
+        "infer_samples_per_sec": 427.67,
+        "infer_step_time": 598.551,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 5.17,
+        "param_count": 63.79
+    },
+    {
+        "model": "efficientnet_b8",
+        "infer_samples_per_sec": 337.8,
+        "infer_step_time": 757.802,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 6.97,
+        "param_count": 84.6
+    },
+    {
+        "model": "vit_tiny_r_s16_p8_224",
+        "infer_samples_per_sec": 6927.95,
+        "infer_step_time": 36.915,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 0.42,
+        "param_count": 6.15
+    },
+    {
+        "model": "vit_tiny_patch16_224",
+        "infer_samples_per_sec": 3203.4,
+        "infer_step_time": 79.862,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 1.07,
+        "param_count": 5.52
+    },
+    {
+        "model": "vit_tiny_r_s16_p8_384",
+        "infer_samples_per_sec": 2342.91,
+        "infer_step_time": 109.219,
+        "infer_batch_size": 256,
+        "infer_img_size": 384,
+        "infer_gmacs": 1.23,
+        "param_count": 6.16
+    },
+    {
+        "model": "vit_tiny_patch16_384",
+        "infer_samples_per_sec": 850.11,
+        "infer_step_time": 301.048,
+        "infer_batch_size": 256,
+        "infer_img_size": 384,
+        "infer_gmacs": 3.15,
+        "param_count": 5.6
+    },
+    {
+        "model": "vit_small_patch32_224",
+        "infer_samples_per_sec": 5974.84,
+        "infer_step_time": 42.814,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 1.12,
+        "param_count": 22.49
+    },
+    {
+        "model": "vit_small_r26_s32_224",
+        "infer_samples_per_sec": 1549.27,
+        "infer_step_time": 165.179,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 3.44,
+        "param_count": 36.05
+    },
+    {
+        "model": "vit_small_patch16_224",
+        "infer_samples_per_sec": 1488.91,
+        "infer_step_time": 171.893,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 4.24,
+        "param_count": 21.67
+    },
+    {
+        "model": "vit_small_resnet26d_224",
+        "infer_samples_per_sec": 1440.59,
+        "infer_step_time": 177.643,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 5.02,
+        "param_count": 62.84
+    },
+    {
+        "model": "vit_small_resnet50d_s16_224",
+        "infer_samples_per_sec": 617.68,
+        "infer_step_time": 414.376,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 12.97,
+        "param_count": 56.76
+    },
+    {
+        "model": "vit_small_patch16_36x1_224",
+        "infer_samples_per_sec": 490.75,
+        "infer_step_time": 521.578,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 12.61,
+        "param_count": 64.28
+    },
+    {
+        "model": "vit_small_patch16_18x2_224",
+        "infer_samples_per_sec": 485.9,
+        "infer_step_time": 526.779,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 12.61,
+        "param_count": 64.28
+    },
+    {
+        "model": "vit_small_patch32_384",
+        "infer_samples_per_sec": 1974.01,
+        "infer_step_time": 129.62,
+        "infer_batch_size": 256,
+        "infer_img_size": 384,
+        "infer_gmacs": 3.25,
+        "param_count": 22.53
+    },
+    {
+        "model": "vit_small_r26_s32_384",
+        "infer_samples_per_sec": 528.42,
+        "infer_step_time": 484.39,
+        "infer_batch_size": 256,
+        "infer_img_size": 384,
+        "infer_gmacs": 10.07,
+        "param_count": 36.08
+    },
+    {
+        "model": "vit_small_patch16_384",
+        "infer_samples_per_sec": 397.61,
+        "infer_step_time": 643.761,
+        "infer_batch_size": 256,
+        "infer_img_size": 384,
+        "infer_gmacs": 12.42,
+        "param_count": 21.81
+    }
+]
