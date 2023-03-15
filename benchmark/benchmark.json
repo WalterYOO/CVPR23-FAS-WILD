@@ -477,6 +477,15 @@
         "param_count": 4.2
     },
     {
+        "model": "mobilenetv3_large_100",
+        "infer_samples_per_sec": 683.6,
+        "infer_step_time": 374.453,
+        "infer_batch_size": 256,
+        "infer_img_size": 640,
+        "infer_gmacs": 1.74,
+        "param_count": 4.2
+    },
+    {
         "model": "efficientnet_b1_pruned",
         "infer_samples_per_sec": 3502.96,
         "infer_step_time": 73.054,
@@ -772,5 +781,50 @@
         "infer_img_size": 384,
         "infer_gmacs": 12.42,
         "param_count": 21.81
+    },
+    {
+        "model": "seresnet18",
+        "infer_samples_per_sec": 2469.22,
+        "infer_step_time": 103.629,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 1.81,
+        "param_count": 11.27
+    },
+    {
+        "model": "seresnet50",
+        "infer_samples_per_sec": 695.12,
+        "infer_step_time": 368.2,
+        "infer_batch_size": 256,
+        "infer_img_size": 224,
+        "infer_gmacs": 4.09,
+        "param_count": 26.06
+    },
+    {
+        "model": "seresnet18",
+        "infer_samples_per_sec": 1953.34,
+        "infer_step_time": 130.947,
+        "infer_batch_size": 256,
+        "infer_img_size": 256,
+        "infer_gmacs": 2.37,
+        "param_count": 11.27
+    },
+    {
+        "model": "seresnet50",
+        "infer_samples_per_sec": 528.33,
+        "infer_step_time": 484.465,
+        "infer_batch_size": 256,
+        "infer_img_size": 256,
+        "infer_gmacs": 5.34,
+        "param_count": 26.06
+    },
+    {
+        "model": "seresnet18",
+        "infer_samples_per_sec": 897.22,
+        "infer_step_time": 285.195,
+        "infer_batch_size": 256,
+        "infer_img_size": 368,
+        "infer_gmacs": 4.99,
+        "param_count": 11.27
     }
 ]
