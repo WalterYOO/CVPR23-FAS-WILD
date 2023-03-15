@@ -12,6 +12,15 @@ from tqdm import tqdm
 # %%
 from dataset import FASWildDataset, FASWildZipDataset
 # %%
+import argparse
+parser = argparse.ArgumentParser(description='Config substitute')
+parser.add_argument('--ckpt', default='',type=str, help='Checkpoint file path')
+parser.add_argument('--model-name', default='',type=str, help='Model name')
+parser.add_argument('--image-size', default=224,type=int, help='Input image size')
+parser.add_argument('--batch-size', default=128,type=int, help='Input batch size')
+parser.add_argument('--number-classes', default=10,type=int, help='Number of classes')
+args = parser.parse_args()
+# %%
 # annotations_file = '/CVPR23-FAS-WILD/anti_spoof/data/CVPR23-FAS-WILD/train/CVPR2023-Anti_Spoof-Challenge-Release-Data-20230209/train.csv'
 # img_dir = '/CVPR23-FAS-WILD/anti_spoof/data/CVPR23-FAS-WILD/train/CVPR2023-Anti_Spoof-Challenge-Release-Data-20230209'
 annotations_file = '/CVPR23-FAS-WILD/anti_spoof/data_ssd/CVPR23-FAS-WILD/dev/CVPR2023-Anti_Spoof-Challenge-ReleaseData-Dev-20230211/Dev.txt'
@@ -46,7 +55,7 @@ output = f'{output_prefix}/exp{exp_number}'
 if not os.path.exists(output):
     os.makedirs(output)
 # %%
-input_size = (384, 384)
+input_size = (args.image_size, args.image_size)
 # transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
 transform = transforms.Compose([
     transforms.ToTensor(),
@@ -59,21 +68,21 @@ keep_ratio = True
 evalset = FASWildDataset(annotations_file, img_dir, transform, is_train=False, is_cutface=is_cutface, keep_ratio=keep_ratio)
 # evalset = FASWildZipDataset(zip_file=zip_file, transform=transform, is_train=False)
 # %%
-batch_size = 128
+batch_size = args.batch_size
 evalloader = torch.utils.data.DataLoader(evalset, batch_size=batch_size,
                                           shuffle=False, num_workers=16)
 # %%
-ckpt_filename = '/CVPR23-FAS-WILD/anti_spoof/output/exp36/anti_spoof_efficientnet_b4-23.pth'
+ckpt_filename = '/CVPR23-FAS-WILD/anti_spoof/output/exp50/anti_spoof_mobilenetv3_large_100-23.pth' if not args.ckpt else args.ckpt
 # %%
 ckpt = torch.load(ckpt_filename)
 # %%
-model_name = 'efficientnet_b4'
+model_name = 'mobilenetv3_large_100' if not args.model_name else args.model_name
 if hasattr(timm.models, model_name):
     model_func = getattr(timm.models, model_name)
 else:
     print(f'There is no model {model_name} in timm')
     exit()
-num_classes = 10
+num_classes = args.number_classes
 net = model_func(num_classes=num_classes)
 net.load_state_dict(ckpt['net'])
 net = net.cuda()
