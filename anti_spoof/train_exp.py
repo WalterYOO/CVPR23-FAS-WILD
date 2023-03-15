@@ -60,13 +60,23 @@ hfile.setFormatter(formatter)
 logger.addHandler(hfile)
 tbwriter = SummaryWriter(log_dir=output)
 # %%
-input_size = (448, 448)
-transform = transforms.Compose([
-    transforms.ToTensor(),
-    transforms.ConvertImageDtype(torch.float),
-    transforms.Resize(input_size),
-    transforms.RandomHorizontalFlip(p=0.5),
-    ])
+input_size = (640, 640)
+use_imagenet_norm = False
+if use_imagenet_norm:
+    transform = transforms.Compose([
+        transforms.ToTensor(),
+        transforms.ConvertImageDtype(torch.float),
+        transforms.Resize(input_size),
+        transforms.RandomHorizontalFlip(p=0.5),
+        transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
+        ])
+else:
+    transform = transforms.Compose([
+        transforms.ToTensor(),
+        transforms.ConvertImageDtype(torch.float),
+        transforms.Resize(input_size),
+        transforms.RandomHorizontalFlip(p=0.5),
+        ])
 # %%
 is_cutface = True
 keep_ratio = True
@@ -142,6 +152,7 @@ config = {
     'is_cutface': is_cutface,
     'keep_ratio': keep_ratio,
     'balance_sampling': balance_sampling,
+    'use_imagenet_norm': use_imagenet_norm,
     'num_classes': num_classes,
     'model_name': model_name,
     'base_lr': base_lr,
