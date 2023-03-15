@@ -37,8 +37,13 @@ class FASWildDataset(Dataset):
             print(e)
         image = image.convert('RGB')
         if self.is_cutface:
-            expand_ratio = random.random() * .1
-            image = self._cutout_face(image, img_path, expand_ratio=expand_ratio)
+            if self.is_train:
+                expand_ratio_w = random.random() * .1
+                expand_ratio_h = random.random() * .1
+            else:
+                expand_ratio_w = .1
+                expand_ratio_h = .1
+            image = self._cutout_face(image, img_path, expand_ratio_w=expand_ratio_w, expand_ratio_h=expand_ratio_h)
         if self.keep_ratio:
             w, h = image.size
             edge_length = max(w, h)
@@ -52,7 +57,7 @@ class FASWildDataset(Dataset):
         else:
             return image, self.img_labels.iloc[idx, 0]
 
-    def _cutout_face(self, image, image_path, expand_ratio=0):
+    def _cutout_face(self, image, image_path, expand_ratio_w=0, expand_ratio_h=0):
         pt_path = os.path.splitext(image_path)[0] + '.txt'
         pts = pd.read_csv(pt_path, header=None, sep=' ')
         x1, y1 = pts.iloc[0]
@@ -61,7 +66,7 @@ class FASWildDataset(Dataset):
         y1, y2 = (y1, y2) if y1 <= y2 else (y2, y1)
         w = x2 - x1
         h = y2 - y1
-        face = image.crop((x1 - w * expand_ratio, y1 - h * expand_ratio, x2 + w * expand_ratio, y2 + h * expand_ratio))
+        face = image.crop((x1 - w * expand_ratio_w, y1 - h * expand_ratio_h, x2 + w * expand_ratio_w, y2 + h * expand_ratio_h))
         return face
 
     def _balance_sampling(self):
