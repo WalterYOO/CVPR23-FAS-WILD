@@ -14,11 +14,12 @@ from dataset import FASWildDataset, FASWildZipDataset
 # %%
 import argparse
 parser = argparse.ArgumentParser(description='Config substitute')
-parser.add_argument('--ckpt', default='',type=str, help='Checkpoint file path')
-parser.add_argument('--model-name', default='',type=str, help='Model name')
-parser.add_argument('--image-size', default=224,type=int, help='Input image size')
-parser.add_argument('--batch-size', default=128,type=int, help='Input batch size')
-parser.add_argument('--number-classes', default=10,type=int, help='Number of classes')
+parser.add_argument('--ckpt', default='', type=str, help='Checkpoint file path')
+parser.add_argument('--model-name', default='', type=str, help='Model name')
+parser.add_argument('--image-size', default=224, type=int, help='Input image size')
+parser.add_argument('--batch-size', default=128, type=int, help='Input batch size')
+parser.add_argument('--number-classes', default=10, type=int, help='Number of classes')
+parser.add_argument('--use-imagenet-norm', action="store_true", default=False, help='Use imagenet norm parameters')
 args = parser.parse_args()
 # %%
 # annotations_file = '/CVPR23-FAS-WILD/anti_spoof/data/CVPR23-FAS-WILD/train/CVPR2023-Anti_Spoof-Challenge-Release-Data-20230209/train.csv'
@@ -56,12 +57,20 @@ if not os.path.exists(output):
     os.makedirs(output)
 # %%
 input_size = (args.image_size, args.image_size)
-# transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
-transform = transforms.Compose([
-    transforms.ToTensor(),
-    transforms.ConvertImageDtype(torch.float),
-    transforms.Resize(input_size),
-    ])
+use_imagenet_norm = args.use_imagenet_norm
+if args.use_imagenet_norm:
+    transform = transforms.Compose([
+        transforms.ToTensor(),
+        transforms.ConvertImageDtype(torch.float),
+        transforms.Resize(input_size),
+        transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
+        ])
+else:
+    transform = transforms.Compose([
+        transforms.ToTensor(),
+        transforms.ConvertImageDtype(torch.float),
+        transforms.Resize(input_size),
+        ])
 # %%
 is_cutface = True
 keep_ratio = True
@@ -94,6 +103,7 @@ config = {
     'input_size': input_size,
     'is_cutface': is_cutface,
     'keep_ratio': keep_ratio,
+    'use_imagenet_norm': use_imagenet_norm,
     'num_classes': num_classes,
     'model_name': model_name,
     'output': output,
