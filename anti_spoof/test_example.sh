@@ -1,0 +1,2 @@
+CUDA_VISIBLE_DEVICES=0 python eval_exp.py --ckpt /CVPR23-FAS-WILD/anti_spoof/output-3090-0/exp61/anti_spoof_mobilenetv3_large_100-23.pth --model-name mobilenetv3_large_100 --image-size 800 --number-classes 10 --batch-size 64 --use-imagenet-norm
+CUDA_VISIBLE_DEVICES=0 python test_exp.py --ckpt /CVPR23-FAS-WILD/anti_spoof/output-3090-0/exp61/anti_spoof_mobilenetv3_large_100-23.pth --model-name mobilenetv3_large_100 --image-size 800 --number-classes 10 --batch-size 64 --use-imagenet-norm
