@@ -26,6 +26,17 @@ logger = logging.getLogger(__file__)
 # hstdout.setFormatter(formatter)
 # logger.addHandler(hstdout)
 # %%
+import argparse
+parser = argparse.ArgumentParser(description='Config substitute')
+parser.add_argument('--resume', action="store_true", default=False, help='Resume from checkpoint')
+parser.add_argument('--ckpt', default='', type=str, help='Checkpoint file path')
+parser.add_argument('--model-name', default='', type=str, help='Model name')
+parser.add_argument('--image-size', default=224, type=int, help='Input image size')
+parser.add_argument('--batch-size', default=128, type=int, help='Input batch size')
+parser.add_argument('--number-classes', default=10, type=int, help='Number of classes')
+parser.add_argument('--use-imagenet-norm', action="store_true", default=False, help='Use imagenet norm parameters')
+args = parser.parse_args()
+# %%
 annotations_file = '/CVPR23-FAS-WILD/anti_spoof/data/CVPR23-FAS-WILD/train/CVPR2023-Anti_Spoof-Challenge-Release-Data-20230209/train10.csv'
 img_dir = '/CVPR23-FAS-WILD/anti_spoof/data/CVPR23-FAS-WILD/train/CVPR2023-Anti_Spoof-Challenge-Release-Data-20230209'
 # %%
@@ -60,8 +71,8 @@ hfile.setFormatter(formatter)
 logger.addHandler(hfile)
 tbwriter = SummaryWriter(log_dir=output)
 # %%
-input_size = (640, 640)
-use_imagenet_norm = False
+input_size = (args.image_size, args.image_size)
+use_imagenet_norm = args.use_imagenet_norm
 if use_imagenet_norm:
     transform = transforms.Compose([
         transforms.ToTensor(),
@@ -84,25 +95,25 @@ balance_sampling = False
 trainset = FASWildDataset(annotations_file, img_dir, transform, is_cutface=is_cutface, keep_ratio=keep_ratio, balance_sampling=balance_sampling)
 # %%
 base_batch_size = 128
-batch_size = 64
+batch_size = args.batch_size
 batch_size_scale = base_batch_size / batch_size
 trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size,
                                           shuffle=True, num_workers=16)
 # %%
-resume = True
+resume = args.resume
 reset_optim_state_dict = True
-ckpt_filename = '/CVPR23-FAS-WILD/anti_spoof/output/exp37/anti_spoof_mobilenetv3_large_100-23.pth'
+ckpt_filename = args.ckpt
 # %%
 if resume:
     ckpt = torch.load(ckpt_filename)
 # %%
-model_name = 'mobilenetv3_large_100'
+model_name = 'mobilenetv3_large_100' if not args.model_name else args.model_name
 if hasattr(timm.models, model_name):
     model_func = getattr(timm.models, model_name)
 else:
     print(f'There is no model {model_name} in timm')
     exit()
-num_classes = 2
+num_classes = args.number_classes
 net = model_func(num_classes=num_classes)
 if resume:
     if num_classes != ckpt['net']['classifier.bias'].shape[0]:
