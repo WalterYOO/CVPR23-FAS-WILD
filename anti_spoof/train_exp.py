@@ -167,6 +167,7 @@ config = {
     'use_imagenet_norm': use_imagenet_norm,
     'num_classes': num_classes,
     'model_name': model_name,
+    'pretrained': args.pretrained,
     'base_lr': base_lr,
     'use_focal': use_focal,
     'optimizer_type': optimizer_type,
