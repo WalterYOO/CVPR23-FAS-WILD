@@ -31,6 +31,7 @@ parser = argparse.ArgumentParser(description='Config substitute')
 parser.add_argument('--resume', action="store_true", default=False, help='Resume from checkpoint')
 parser.add_argument('--ckpt', default='', type=str, help='Checkpoint file path')
 parser.add_argument('--model-name', default='', type=str, help='Model name')
+parser.add_argument('--pretrained', action="store_true", default=False, help='Load pretrained model from timm')
 parser.add_argument('--image-size', default=224, type=int, help='Input image size')
 parser.add_argument('--batch-size', default=128, type=int, help='Input batch size')
 parser.add_argument('--number-classes', default=10, type=int, help='Number of classes')
@@ -114,7 +115,7 @@ else:
     print(f'There is no model {model_name} in timm')
     exit()
 num_classes = args.number_classes
-net = model_func(num_classes=num_classes)
+net = model_func(num_classes=num_classes, pretrained=args.pretrained)
 if resume:
     if num_classes != ckpt['net']['classifier.bias'].shape[0]:
         logger.info(f'num_classes {num_classes} mismatch classifier.bias {ckpt["net"]["classifier.bias"].shape[0]}')
